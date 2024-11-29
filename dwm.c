@@ -1737,6 +1737,7 @@ toggletag(const Arg *arg)
 {
 	unsigned int newtags;
 
+	fprintf(stderr, "Changing tag!\n");
 	if (!selmon->sel)
 		return;
 	newtags = selmon->sel->tags ^ (arg->ui & TAGMASK);

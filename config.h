@@ -17,7 +17,7 @@ static const char col_gray3[]       = "#bbbbbb";
 //current tag and current window font color
 static const char col_gray4[]       = "#eeeeee";
 //Top bar second color (blue) and active window border color
-static const char col_cyan[]        = "#f59542";
+static const char col_cyan[]        = "#A53CDA";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
@@ -26,7 +26,8 @@ static const char *colors[][3]      = {
 
 /* tagging */
 //tag names (upper left)
-static const char *tags[] = { "", "", "", "", "",  "", "", "", "", "" };
+
+static const char *tags[] = { "", "", "", "", "",  "", "", "", "", "" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -70,7 +71,7 @@ static const char *monitor[] = { "/usr/bin/htop", NULL };
 //sets st as the default terminal
 //static const char *termcmd[]  = { "st", NULL };
 //sets urxvt as the default terminal
-static const char *termcmd[]  = { "urxvt", NULL };
+static const char *termcmd[]  = { "st", NULL };
 //volume controls
 static const char *upvol[]   = { "amixer", "-q", "set", "Master", "5%+", "unmute", NULL };
 static const char *downvol[] = { "amixer", "-q", "set", "Master", "5%-", "unmute", NULL };
@@ -110,7 +111,7 @@ static Key keys[] = {
 	{ MODKEY,              		    XK_b,      shiftview,      { .i = -1 } },
     { MODKEY,                       XK_F8,     spawn,          {.v = upvol   } },
     { MODKEY,                       XK_F7,     spawn,          {.v = downvol } },
-    { MODKEY,                       XK_F5,     spawn,          {.v = mutevol } },
+    { MODKEY,                       XK_F6,     spawn,          {.v = mutevol } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
